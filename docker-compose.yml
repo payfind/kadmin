@@ -8,13 +8,13 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "8080:8080"
+      - "8094:8080"
     environment:
-      ZOOKEEPER_HOST: zookeeper.localtest.me:2181
-      KAFKA_HOST: kafka.localtest.me:9093
-      #SECURITY_PROTOCOL: SSL
-      #TRUST_STORE_LOCATION: ssl/client.truststore.jks
-      #TRUST_STORE_PASSWORD: password
-      #KEY_STORE_LOCATION: ssl/server.keystore.jks
-      #KEY_STORE_PASSWORD: password
-      #KEY_PASSWORD: password
+      ZOOKEEPER_HOST: zookeeper:2181
+      KAFKA_HOST: kafka:9093
+      SECURITY_PROTOCOL: PLAINTEXT
+      TRUST_STORE_LOCATION: ssl/client.truststore.jks
+      TRUST_STORE_PASSWORD: password
+      KEY_STORE_LOCATION: ssl/server.keystore.jks
+      KEY_STORE_PASSWORD: password
+      KEY_PASSWORD: password
